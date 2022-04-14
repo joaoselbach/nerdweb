@@ -63,7 +63,7 @@
 
     <!--==================== HOME ====================-->
     <main>
-        <div class="swiper mySwiper">
+        <div class="swiper swiperBanner">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="assets/banner.png" alt="Nerdweb Banner"></div>
                 <div class="swiper-slide"><img src="assets/banner.png" alt="Nerdweb Banner"></div>
@@ -74,12 +74,68 @@
             </div>
         </div>
 
+        <div class="main-container">
+            <section class="services-content">
+                <div class="section-title">
+                    <h1 class="bold-dark-title">Descubra os serviços Nerdweb <span class="bold-span-blue">que mais
+                            combinam com a sua empresa</span></h1>
+                    <button class="section-button">Ver Serviços</button>
+                </div>
+                <div class="card-container">
+                    <div class="service-card">
+                        <img src="assets/route.png" alt="Route Icon">
+                        <p class="card-title">Titutlo</p>
+                        <p class="card-description">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="assets/headset.png" alt="Headset Icon">
+                        <p class="card-title">Titutlo</p>
+                        <p class="card-description">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="assets/inventory.png" alt="Inventory Icon">
+                        <p class="card-title">Titutlo</p>
+                        <p class="card-description">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="products-caroussel">
+                <h1 class="bold-dark-title">Conheça todos <span class="bold-span-blue">produtos Nerdweb</span></h1>
+                <div class="swiper swiperProducts">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/caroussel/LAPTOP-1.png" alt="Nerdweb Banner"
+                                class="swiper-products"></div>
+                        <div class="swiper-slide"><img src="assets/caroussel/PHONE-1.png" alt="Nerdweb Banner"
+                                class="swiper-products"></div>
+                        <div class="swiper-slide"><img src="assets/caroussel/SHOP-1.png" alt="Nerdweb Banner"
+                                class="swiper-products"></div>
+                        <div class="swiper-slide"><img src="assets/caroussel/LAPTOP-1.png" alt="Nerdweb Banner"
+                                class="swiper-products"></div>
+                        <div class="swiper-slide"><img src="assets/caroussel/PHONE-1.png" alt="Nerdweb Banner"
+                                class="swiper-products"></div>
+                        <div class="swiper-slide"><img src="assets/caroussel/SHOP-1.png" alt="Nerdweb Banner"
+                                class="swiper-products"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </div>
+
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <!-- Initialize Swiper -->
         <script>
-            var swiper = new Swiper(".mySwiper", {});
+            var swiper = new Swiper(".swiperBanner", {
+                loop: true
+            });
+            var swiper = new Swiper(".swiperProducts", {
+                slidesPerView: window.innerWidth < 768 ? 3 : 9,
+                spaceBetween: 20,
+                loop: true,
+                freeMode: true,
+            });
         </script>
     </main>
 
