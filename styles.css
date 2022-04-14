@@ -1,0 +1,308 @@
+/*============== VARIABLES ============== */
+:root {
+
+    /*============== HEADER ============== */
+    --header-height: 4rem;
+
+    /*============== HEADER ============== */
+     --max-width: 1270px;
+
+    /*============== COLORS ============== */
+    --header-light: #fff;
+    --header-blue: #033244;
+    --header-light-links: #57665a;
+    --header-light-links-hover: #040504;
+    --header-light-button: #000000;
+    --header-dark-links: #ebebeb;
+    --header-dark-links-hover: #ffffff;
+    --header-dark-border-search: #ffffff73;
+    --header-dark-focus-search: #00AEEF;
+    --teal: #00aeef;
+    --light-active: #f4f4f4;
+    --light-hover: #ececec;
+    --light-icon: #fff;
+    --input-text-light: #fff;
+    --input-text-dark: #2e2e2e;
+    --input-light-placeholder: #ffffff3c;
+    --input-dark-placeholder: #2e2e2e6c;
+
+    /*============== TYPOGRAPHY ============== */
+    --body-font: 'Roboto Slab', serif;
+    --header-light-font: .85rem
+
+    /*============== Font Weight ============== */
+    --light: 300;
+    --medium: 500;
+    --bold: 700;
+    --black: 900;
+
+}
+
+/*============== BASE CONFIG ============== */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*  Default Font size: 16px Desktop  */
+html {
+    scroll-behavior: smooth;
+
+    @media (max-width: 1080px) {
+        font-size: 93.75%; /* 15px */
+    }
+
+    @media (max-width: 728px) {
+        font-size: 87.5%; /* 14px */
+    }
+
+    /* 1rem = font-size  */
+}
+
+body {
+    font-family: var(--body-font);
+    font-weight: var(--light);
+    -webkit-font-smoothing: antialiased;
+    background-color: #c3c3c3;
+}
+
+button, img, a, i {
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+[disabled] {
+    opacity: 0.6;
+}
+
+/*============== Light Header ============== */
+
+.header-light-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-light);
+    position: fixed;
+    width: 100%;
+}
+
+
+.header-light-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--max-width);
+    margin: 0 auto;
+    padding: 0rem 1rem;
+    height: 4.25rem;
+}
+
+.container-light-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-light-links a {
+    padding: 0 1rem;
+    color: var(--header-light-links);
+    font-size: 1rem;
+    transition: 0.2s all ease;
+    font-weight: var(--light);
+    font-family: 'Roboto Slab';
+}
+
+.header-light-links a:hover {
+    color: var(--header-light-links-hover);
+}
+
+.header-light-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: .5rem;
+    font-weight: var(--bold);
+    transition: 0.2s all ease;
+    padding: .75rem 1rem;
+}
+
+.header-light-btn:hover {
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.25); 
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.25);
+}
+
+.header-light-btn:active {
+    background-color: var(--light-active);
+}
+
+.header-light-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fa-header-light {
+    color: var(--teal);
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: 50%;
+    transition: 0.2s all ease;
+}
+
+.fa-header-light:hover {
+    background-color: var(--light-hover);
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+.fa-hamburguer {
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: 50%;
+    transition: 0.2s all ease;
+}
+
+.fa-hamburguer:hover {
+    background-color: var(--light-hover);
+}
+
+/*============== Dark Header ============== */
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-dark-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-blue);
+    position: sticky;
+    margin-top: 4rem;
+}
+
+
+.header-dark-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--max-width);
+    margin: 0 auto;
+    padding: 0rem 1rem;
+    height: 4.25rem;
+}
+
+.header-dark-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-dark-links a {
+    color: var(--header-dark-links);
+    font-size: .9rem;
+    transition: 0.2s all ease;
+    font-weight: var(--light);
+    font-family: 'Roboto Slab';
+}
+
+.header-dark-links a:hover {
+    color: var(--header-dark-links-hover);
+}
+
+.container-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 450px;
+    transition: 0.2s all ease;
+}
+
+.search {
+    padding: .75rem 0rem;
+    padding-left: 1.25rem;
+    padding-right: 2.75rem;
+    background-color: #033244;
+    transition: 0.15s all ease;
+    color: var(--input-text-light);
+    border: none;
+    border-radius: 0.4rem;
+    -webkit-box-shadow: 0px 0px 1px 1.5px var(--header-dark-border-search);
+    box-shadow: 0px 0px 1px 1.5px var(--header-dark-border-search);
+}
+
+.search::placeholder {
+    color: var(--input-light-placeholder);
+}
+
+.search:focus {
+    outline: none;
+    -webkit-box-shadow: 0px 0px 1px 1.5px var(--header-dark-focus-search);
+    box-shadow: 0px 0px 1px 1.5px var(--header-dark-focus-search);
+}
+
+.fa-search {
+    position: absolute;
+    color: var(--light-icon);
+    right: 0;
+    margin-right: 1rem;
+}
+
+.nav__menu {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    top: -10px;
+}
+
+.show-menu {
+    top: 0;
+}
+
+/*============== Responsive Breakpoints ============== */
+/*============== Tablet ============== */
+
+@media (max-width: 768px) {
+    .header-light-links, .header-dark-links {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    .fa-hamburguer {
+        font-size: 1rem;
+    }
+
+    .search, .container-search {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .hamburguer-menu-active {
+        display: flex;
+    }
+}
+
+/*============== Mobile ============== */
+
+@media (max-width: 460px) {
+    .header-light-btn, 
+    .header-light-icons  {
+        display: none;
+    }
+}
