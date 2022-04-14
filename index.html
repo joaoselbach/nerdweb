@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="icons/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700;900&display=swap"
@@ -15,12 +16,12 @@
 </head>
 
 <body>
+    <!--==================== HEADER ====================-->
     <div class="header-container">
-
         <header class="header-light-container">
             <div class="header-light-content">
                 <div class="container-light-links">
-                    <img src="assets/img/logo.png" />
+                    <img src="assets/logo.png" />
                     <div class="header-light-links">
                         <a> Nerdweb </a>
                         <a> Serviços </a>
@@ -60,11 +61,30 @@
         </header>
     </div>
 
+    <!--==================== HOME ====================-->
+    <main>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/banner.png" alt="Nerdweb Banner"></div>
+                <div class="swiper-slide"><img src="assets/banner.png" alt="Nerdweb Banner"></div>
+                <div class="swiper-slide"><img src="assets/banner.png" alt="Nerdweb Banner"></div>
+                <div class="swiper-slide"><img src="assets/banner.png" alt="Nerdweb Banner"></div>
+                <div class="swiper-slide"><img src="assets/banner.png" alt="Nerdweb Banner"></div>
+                <div class="swiper-slide"><img src="assets/banner.png" alt="Nerdweb Banner"></div>
+            </div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {});
+        </script>
+    </main>
+
     <!--=============== SCROLL REVEAL ===============-->
     <script src="js/scrollreveal.min.js"></script>
-
-    <!--=============== SWIPER JS ===============-->
-    <script src="js/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="js/main.js"></script>
