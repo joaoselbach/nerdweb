@@ -718,10 +718,6 @@ h1 {
     height: 100%;
 }
 
-.swiper-wrapper {
-    padding: 0rem 4rem;
-}
-
 .swiper-slide {
     text-align: center;
     font-size: 18px;
