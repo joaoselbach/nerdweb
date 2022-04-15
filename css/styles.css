@@ -424,7 +424,7 @@ h1 {
 
 .section-title {
     margin: 0 auto;
-    text-align: center;
+    text-align: inherit;
 }
 
 .span-blue-medium {
