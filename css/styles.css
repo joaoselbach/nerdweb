@@ -888,6 +888,11 @@ h1 {
         flex-direction: column;
         justify-content: center;
     }
+
+    .links-content {
+        align-items: center;
+        text-align: center;
+    }
 }
 
 /*============== Mobile ============== */
